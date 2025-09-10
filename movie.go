@@ -13,8 +13,8 @@ func (m Movie) Name() (string, error) {
 	return jsonflex.GetField(m, "name", jsonflex.AsString())
 }
 
-func (m Movie) TMDBID() (int32, error) {
-	return jsonflex.GetField(m, "tmdb_id", jsonflex.AsInt32())
+func (m Movie) TMDBID() (string, error) {
+	return jsonflex.GetField(m, "tmdb_id", jsonflex.AsString())
 }
 
 func (m Movie) IMDBID() (string, error) {
@@ -55,6 +55,10 @@ func (m Movie) MovieBanner() ([]Image, error) {
 
 func (m Movie) MovieThumb() ([]Image, error) {
 	return jsonflex.GetField(m, "moviethumb", jsonflex.AsArray(jsonflex.AsObject[Image]()))
+}
+
+func (m Movie) MovieSquare() ([]Image, error) {
+	return jsonflex.GetField(m, "moviesquare", jsonflex.AsArray(jsonflex.AsObject[Image]()))
 }
 
 func GetMovie(ctx context.Context, client Client, id string, options ...RequestOption) (Movie, error) {
