@@ -29,6 +29,14 @@ func NewClient(options ClientOptions) Client {
 	}
 }
 
+type HttpStatusCodeError struct {
+	StatusCode int
+}
+
+func (e HttpStatusCodeError) Error() string {
+	return fmt.Sprintf("unexpected status code: %d", e.StatusCode)
+}
+
 type clientImpl struct {
 	options ClientOptions
 }
@@ -78,7 +86,7 @@ func (c *clientImpl) getRaw(ctx context.Context, path string, options ...Request
 		}
 	}
 	if response.StatusCode != http.StatusOK {
-		return nil, fmt.Errorf("unexpected status code: %d", response.StatusCode)
+		return nil, HttpStatusCodeError{StatusCode: response.StatusCode}
 	}
 	if response.Header.Get("Content-Type") != "application/json; charset=utf-8" {
 		return nil, fmt.Errorf("unexpected content type: %s", response.Header.Get("Content-Type"))

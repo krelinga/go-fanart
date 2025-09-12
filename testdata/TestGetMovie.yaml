@@ -44,3 +44,46 @@ interactions:
     status: 200 OK
     code: 200
     duration: 338.624758ms
+- id: 1
+  request:
+    proto: ""
+    proto_major: 0
+    proto_minor: 0
+    content_length: 0
+    host: ""
+    form:
+      api_key:
+      - fake-api-key
+    url: http://webservice.fanart.tv/v3/movies/00000000?api_key=fake-api-key
+    method: GET
+  response:
+    proto: HTTP/1.1
+    proto_major: 1
+    proto_minor: 1
+    transfer_encoding:
+    - chunked
+    content_length: -1
+    uncompressed: true
+    body: "{\n    \"name\": \"\",\n    \"tmdb_id\": \"0\",\n    \"imdb_id\": \"\",\n    \"movieposter\": [\n        {\n            \"id\": \"258930\",\n            \"url\": \"http://assets.fanart.tv/fanart/movies/0/movieposter/-5ce5b47f939ca.jpg\",\n            \"lang\": \"en\",\n            \"likes\": \"4\"\n        },\n        {\n            \"id\": \"265845\",\n            \"url\": \"http://assets.fanart.tv/fanart/movies/0/movieposter/-5d41c774babb6.jpg\",\n            \"lang\": \"en\",\n            \"likes\": \"3\"\n        },\n        {\n            \"id\": \"270433\",\n            \"url\": \"http://assets.fanart.tv/fanart/movies/0/movieposter/-5d828d3c26607.jpg\",\n            \"lang\": \"en\",\n            \"likes\": \"3\"\n        },\n        {\n            \"id\": \"407443\",\n            \"url\": \"http://assets.fanart.tv/fanart/movies/0/movieposter/-651de31e15d83.jpg\",\n            \"lang\": \"en\",\n            \"likes\": \"1\"\n        }\n    ],\n    \"hdmovielogo\": [\n        {\n            \"id\": \"270329\",\n            \"url\": \"http://assets.fanart.tv/fanart/movies/0/hdmovielogo/-5d8151f4ca0ee.png\",\n            \"lang\": \"en\",\n            \"likes\": \"3\"\n        },\n        {\n            \"id\": \"323076\",\n            \"url\": \"http://assets.fanart.tv/fanart/movies/0/hdmovielogo/-6024a1dcb7c07.png\",\n            \"lang\": \"en\",\n            \"likes\": \"1\"\n        },\n        {\n            \"id\": \"323077\",\n            \"url\": \"http://assets.fanart.tv/fanart/movies/0/hdmovielogo/-6024a1f6a3916.png\",\n            \"lang\": \"en\",\n            \"likes\": \"1\"\n        },\n        {\n            \"id\": \"323078\",\n            \"url\": \"http://assets.fanart.tv/fanart/movies/0/hdmovielogo/-6024a20f20c90.png\",\n            \"lang\": \"ru\",\n            \"likes\": \"1\"\n        }\n    ],\n    \"moviethumb\": [\n        {\n            \"id\": \"323125\",\n            \"url\": \"http://assets.fanart.tv/fanart/movies/0/moviethumb/-60253607a45ea.jpg\",\n            \"lang\": \"ru\",\n            \"likes\": \"1\"\n        },\n        {\n            \"id\": \"323120\",\n            \"url\": \"http://assets.fanart.tv/fanart/movies/0/moviethumb/-6025359491644.jpg\",\n            \"lang\": \"en\",\n            \"likes\": \"0\"\n        },\n        {\n            \"id\": \"323121\",\n            \"url\": \"http://assets.fanart.tv/fanart/movies/0/moviethumb/-602535ac1bf05.jpg\",\n            \"lang\": \"ru\",\n            \"likes\": \"0\"\n        },\n        {\n            \"id\": \"323123\",\n            \"url\": \"http://assets.fanart.tv/fanart/movies/0/moviethumb/-602535ec2e795.jpg\",\n            \"lang\": \"en\",\n            \"likes\": \"0\"\n        }\n    ],\n    \"moviedisc\": [\n        {\n            \"id\": \"286864\",\n            \"url\": \"http://assets.fanart.tv/fanart/movies/0/moviedisc/-5e3fd4c700e15.png\",\n            \"lang\": \"en\",\n            \"likes\": \"0\",\n            \"disc\": \"1\",\n            \"disc_type\": \"bluray\"\n        }\n    ]\n}"
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 12 Sep 2025 05:23:48 GMT
+      Server:
+      - nginx
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+    status: 200 OK
+    code: 200
+    duration: 265.000711ms

@@ -193,6 +193,15 @@ func TestGetMovie(t *testing.T) {
 		newResult(square.Lang()).assertValueIs(t, "en")
 		newResult(square.Likes()).assertValueIs(t, "2")
 	}
+
+	t.Run("404MovieId", func(t *testing.T) {
+		_, err := fanart.GetMovie(ctx, client, "00000000")
+		if statusCodeErr, ok := err.(fanart.HttpStatusCodeError); ok {
+			if statusCodeErr.StatusCode != 404 {
+				t.Errorf("Expected 404 status code, got: %d", statusCodeErr.StatusCode)
+			}
+		}
+	})
 }
 
 func findImageById(t *testing.T, images []fanart.Image, id string) (fanart.Image, error) {
