@@ -28,7 +28,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Type:
-      - application/json; charset=utf-8
+      - application/json
       Date:
       - Wed, 10 Sep 2025 06:55:10 GMT
       Server:
